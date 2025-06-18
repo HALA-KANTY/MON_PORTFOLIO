@@ -258,8 +258,8 @@ textarea {
 
 input:focus, textarea:focus, select:focus {
   outline: none;
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 0 3px rgba(254, 59, 50, 0.2);
+  border-color: var(--text-color);
+  box-shadow: 0 0 0 3px var(--text-color);
 }
 
 .submit-btn {
