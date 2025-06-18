@@ -368,11 +368,16 @@ export default {
   padding: 2rem;
   margin: 0 auto;
   width: 100%;
-  
+ 
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .main-content {
+ 
+  margin-top: -50px;
+}
+  
   .nav {
     flex-direction: column;
     padding: 1rem;

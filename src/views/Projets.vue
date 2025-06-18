@@ -568,6 +568,10 @@ export default {
 
 /* Responsive */
 @media (max-width: 768px) {
+ 
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
   .modal-body {
     flex-direction: column;
   }
@@ -583,7 +587,7 @@ export default {
   }
   
   .section-header h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   
   .projects-grid {

@@ -390,6 +390,17 @@ export default {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .about-section {
+ margin-top: 0px;
+  
+}
+  .profile-summary h3 {  
+  font-size: 1.3rem;
+}
+   .section-header h2 {
+    font-size: 1.5rem;
+  }
+
   .profile-highlights {
     flex-direction: column;
     gap: 1rem;
@@ -406,7 +417,7 @@ export default {
   }
   
   .section-header h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 </style>

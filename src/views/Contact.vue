@@ -65,7 +65,7 @@
           
           <button type="submit" class="submit-btn">
             <i class="fas fa-paper-plane button-icon"></i>
-            Envoyer le message
+            Envoyer 
           </button>
         </form>
       </div>
@@ -380,6 +380,10 @@ input:focus, textarea:focus, select:focus {
 }
 
 @media (max-width: 576px) {
+  .section-header h2 {
+  font-size: 1.5rem;
+ 
+}
   .contact-section {
     padding: 3rem 1.5rem;
   }
