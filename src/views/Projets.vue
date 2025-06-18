@@ -211,8 +211,8 @@
       <div class="modal-tech">
         <h4>Technologies</h4>
         <div class="tech-list">
-          <span class="tech-tag java">Java</span>
-          <span class="tech-tag javafx">JavaFX</span>
+          <span class="tech-tag html">HTML/CSS</span>
+          <span class="tech-tag php">PHP</span>
           <span class="tech-tag mysql">MySQL</span>
         </div>
          <div class="project-link-container">
