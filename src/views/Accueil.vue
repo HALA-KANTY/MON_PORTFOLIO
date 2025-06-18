@@ -153,7 +153,7 @@ export default {
 .typing-effect {
   font-size: 1.8rem;
   margin-bottom: 2rem;
-  color: var(--primary-color);
+  color: var(--text-color);
   height: 2rem;
   font-weight: normal;
 }
@@ -221,7 +221,7 @@ export default {
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(29, 37, 57, 0.15);
-  background: #17202f;
+  background: var(--secondary-color);
 }
 
 /* Responsive */

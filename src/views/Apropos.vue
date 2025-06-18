@@ -184,7 +184,7 @@ export default {
 }
 
 .profile-card {
-  background: white;
+  background: var(--nav-bg);
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -196,7 +196,7 @@ export default {
 }
 
 .profile-summary h3 {
-  color: var(--primary-color);
+  color: var(--text-color);
   font-size: 1.5rem;
   margin-bottom: 1rem;
   display: flex;
@@ -220,7 +220,7 @@ export default {
   align-items: center;
   gap: 0.5rem;
   background: rgba(254, 59, 50, 0.1);
-  color: var(--primary-color);
+  color: var(var(--text-color));
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-weight: 500;
@@ -234,7 +234,7 @@ export default {
 
 .info-card {
   margin-top: -20px;
-  background: white;
+  background: var(--nav-bg);
   border-radius: 12px;
   padding: 1.5rem;
   padding-bottom: 2px;
@@ -250,7 +250,7 @@ export default {
 }
 
 .card-header h3 {
-  color: var(--primary-color);
+  color: var(var(--text-color));
   font-size: 1.3rem;
 }
 
@@ -291,7 +291,7 @@ export default {
 .timeline-date {
   display: block;
   font-weight: 600;
-  color: var(--primary-color);
+  color:var(--text-color);
   font-size: 0.9rem;
 }
 
@@ -315,7 +315,7 @@ export default {
 }
 
 .skill-category h4 {
-  color: var(--primary-color);
+  color: var(--text-color);
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
 }
@@ -328,7 +328,7 @@ export default {
 
 .skill-tag {
   background: var(--light-gray);
-  color: var(--primary-color);
+  color: var(--text-color);
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-size: 0.9rem;

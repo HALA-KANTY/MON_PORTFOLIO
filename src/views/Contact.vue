@@ -238,7 +238,7 @@ input, textarea, select {
   border-radius: 8px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background-color: white;
+  background-color: var( --nav-bg);
   color: var(--text-color);
 }
 
@@ -267,8 +267,8 @@ input:focus, textarea:focus, select:focus {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  background: var(--primary-color);
-  color: white;
+  background: var(--text-color);
+  color: var( --nav-bg);
   padding: 1rem 2rem;
   border: none;
   border-radius: 8px;
@@ -280,13 +280,13 @@ input:focus, textarea:focus, select:focus {
 }
 
 .submit-btn:hover {
-  background: #17202f;
+  background: var(--secondary-color);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(29, 37, 57, 0.3);
 }
 
 .info-card {
-  background: white;
+  background: var( --nav-bg);
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -302,7 +302,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .card-header h3 {
-  color: var(--primary-color);
+  color: var(--text-color);
   font-size: 1.3rem;
 }
 
@@ -347,7 +347,7 @@ input:focus, textarea:focus, select:focus {
   height: 2.8rem;
   border-radius: 50%;
   background: var(--light-gray);
-  color: var(--primary-color);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -356,8 +356,8 @@ input:focus, textarea:focus, select:focus {
 }
 
 .social-link:hover {
-  background: var(--primary-color);
-  color: white;
+  background: var(--text-color);
+  color: var(--bg-color);
   transform: translateY(-3px);
 }
 

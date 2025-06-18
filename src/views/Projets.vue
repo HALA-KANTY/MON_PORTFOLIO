@@ -337,7 +337,7 @@ export default {
 }
 
 .project-card {
-  background: white;
+  background: var(--nav-bg);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -357,7 +357,7 @@ export default {
 }
 
 .project-header h3 {
-  color: var(--primary-color);
+  color: var(--text-color);
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
@@ -441,7 +441,7 @@ export default {
 }
 
 .project-link:hover {
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 /* Modal Styles */
@@ -467,7 +467,7 @@ export default {
 }
 
 .modal-content {
-  background-color: white;
+  background-color: var(--nav-bg);
   border-radius: 12px;
   width: 90%;
   max-width: 800px;
@@ -516,7 +516,7 @@ export default {
 }
 
 .modal-details h4 {
-  color: var(--primary-color);
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
