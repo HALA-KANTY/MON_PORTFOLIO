@@ -3,7 +3,7 @@
     <div class="hero-content">
       <!-- Image placée en haut pour mobile -->
       <div class="hero-image-container mobile-only">
-        <img src="../icone/ste.png" alt="Steeven Cesard" class="hero-image">
+        <img src="../icone/ste6.png" alt="Steeven Cesard" class="hero-image">
         <div class="image-glow"></div>
       </div>
 
@@ -43,7 +43,7 @@
 
     <!-- Image placée à droite pour desktop -->
     <div class="hero-image-container desktop-only">
-      <img src="../icone/ste.png" alt="Steeven Cesard" class="hero-image">
+      <img src="../icone/ste6.png" alt="Steeven Cesard" class="hero-image">
       <div class="image-glow"></div>
     </div>
   </section>
@@ -103,11 +103,11 @@ export default {
 .hero-image {
   width: 100%;
   height: 100%;
-  border-radius: 100px;
+  border-radius: 100%;
   object-fit: cover;
   position: relative;
   z-index: 2;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px var(--text-color);
 }
 
 .image-glow {
@@ -115,7 +115,7 @@ export default {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  background: radial-gradient(circle, rgba(254, 59, 50, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle,var(--text-color) 0%, transparent 70%);
   top: 0;
   left: 0;
   animation: pulse 3s infinite alternate;
