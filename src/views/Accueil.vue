@@ -3,7 +3,7 @@
     <div class="hero-content">
       <!-- Image placée en haut pour mobile -->
       <div class="hero-image-container mobile-only">
-        <img src="../icone/ste6.png" alt="Steeven Cesard" class="hero-image">
+        <img src="../icone/ste7.png" alt="Steeven Cesard" class="hero-image">
         <div class="image-glow"></div>
       </div>
 
@@ -12,15 +12,24 @@
         <span class="title-line highlight">BEFENO Steeven Cesard</span>
       </h1>
       
-      <div class="typing-effect">
-        <span class="typing-text">Aspirant développeur Full Stack</span>
-        <span class="typing-cursor">|</span>
+      <!-- Texte fixe Aspirant développeur Full Stack -->
+      <div class="static-role">
+        Aspirant développeur Full Stack
+      </div>
+      
+      <!-- Animation des technologies -->
+      <div class="tech-animation">
+        <span class="static-text">Technologies : </span>
+        <div class="typing-effect">
+          <span class="typing-text"></span>
+          <span class="typing-cursor">|</span>
+        </div>
       </div>
       
       <p class="hero-description">
-       Étudiant en deuxième année de licence à l'ENI Fianarantsoa <br>
-      Je suis passionné par la création de solutions digitales innovantes. <br>
-      Spécialisé dans le développement web et desktop avec un intérêt marqué pour la sécurité informatique et l'IA.
+        Étudiant en deuxième année de licence à l'ENI Fianarantsoa <br>
+        Je suis passionné par la création de solutions digitales innovantes. <br>
+        Spécialisé dans le développement web et desktop avec un intérêt marqué pour la sécurité informatique et l'IA.
       </p>
       
       <div class="social-icons">
@@ -33,6 +42,9 @@
         <a href="https://www.facebook.com/steeven.befeno" target="_blank" class="social-link">
           <i class="fab fa-facebook"></i>
         </a>
+        <a href="https://wa.me/261328535118" target="_blank" class="social-link">
+          <i class="fab fa-whatsapp"></i>
+        </a>
       </div>
       
       <button class="cta-button" @click="downloadCV">
@@ -43,7 +55,7 @@
 
     <!-- Image placée à droite pour desktop -->
     <div class="hero-image-container desktop-only">
-      <img src="../icone/ste6.png" alt="Steeven Cesard" class="hero-image">
+      <img src="../icone/ste7.png" alt="Steeven Cesard" class="hero-image">
       <div class="image-glow"></div>
     </div>
   </section>
@@ -52,16 +64,84 @@
 <script>
 export default {
   name: 'Accueil',
+  data() {
+    return {
+      technologies: [
+        'Vue.js',
+        'React',
+        'PHP',
+        'Java',
+        'C#',
+        'HTML/CSS',
+        'JavaScript',      
+        'MySQL',
+        'SQL'
+      ],
+      currentTechIndex: 0,
+      isDeleting: false,
+      currentText: '',
+      typingSpeed: 150,
+      deletingSpeed: 50,
+      typingTimeout: null // Stocke l'ID du timeout
+    }
+  },
+  mounted() {
+    this.typeTechnologies();
+  },
+  beforeUnmount() {
+    // Nettoie le timeout quand le composant est démonté
+    if (this.typingTimeout) {
+      clearTimeout(this.typingTimeout);
+    }
+  },
   methods: {
     downloadCV() {
-  const cvPath = '/fichier/CV_BEFENO_Steeven_Cesard.pdf';
-  const link = document.createElement('a');
-  link.href = cvPath;
-  link.download = 'CV_BEFENO_Steeven_Cesard.pdf';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}}
+      const cvPath = '/fichier/CV_BEFENO_STEEVEN_CESARD.pdf';
+      const link = document.createElement('a');
+      link.href = cvPath;
+      link.download = 'CV_BEFENO_Steeven_Cesard.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    },
+    typeTechnologies() {
+      // Nettoie tout timeout existant avant de démarrer un nouveau
+      if (this.typingTimeout) {
+        clearTimeout(this.typingTimeout);
+      }
+      
+      const current = this.currentTechIndex % this.technologies.length;
+      const fullText = this.technologies[current];
+      
+      if (this.isDeleting) {
+        this.currentText = fullText.substring(0, this.currentText.length - 1);
+      } else {
+        this.currentText = fullText.substring(0, this.currentText.length + 1);
+      }
+      
+      const typingElement = document.querySelector('.typing-text');
+      if (typingElement) {
+        typingElement.textContent = this.currentText;
+      }
+      
+      let typeSpeed = this.typingSpeed;
+      
+      if (this.isDeleting) {
+        typeSpeed = this.deletingSpeed;
+      }
+      
+      if (!this.isDeleting && this.currentText === fullText) {
+        typeSpeed = 2000; // Pause à la fin de l'écriture
+        this.isDeleting = true;
+      } else if (this.isDeleting && this.currentText === '') {
+        this.isDeleting = false;
+        this.currentTechIndex++;
+        typeSpeed = 500; // Pause avant de commencer le suivant
+      }
+      
+      this.typingTimeout = setTimeout(this.typeTechnologies, typeSpeed);
+    }
+  }
 }
 </script>
 
@@ -150,16 +230,40 @@ export default {
   font-size: 3rem;
 }
 
-.typing-effect {
+.static-role {
   font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  height: 2rem;
+}
+
+.tech-animation {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
   color: var(--text-color);
   height: 2rem;
-  font-weight: normal;
+}
+
+.static-text {
+  margin-right: 0.5rem;
+}
+
+.typing-effect {
+  display: inline-flex;
+  align-items: center;
+  min-width: 150px;
+}
+
+.typing-text {
+  color: var(--secondary-color);
+  font-weight: bold;
 }
 
 .typing-cursor {
   animation: blink 1s infinite;
+  margin-left: 2px;
 }
 
 @keyframes blink {
@@ -269,7 +373,8 @@ export default {
     font-size: 2.5rem;
   }
   
-  .typing-effect {
+  .static-role,
+  .tech-animation {
     font-size: 1.3rem;
   }
   

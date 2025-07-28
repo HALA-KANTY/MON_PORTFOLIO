@@ -98,7 +98,57 @@
           </a>
         </div>
       </div>
+
+      <!-- Projet 5 -->
+     <div class="project-card">
+        <div class="project-header">
+          <h3>LUXURY HAVEN</h3>
+          <span class="project-date">Juin 2025</span>
+        </div>
+        <div class="project-content">
+          <p class="project-description">
+            Site vitrine pour un hôtel fictif avec interface  moderne et design élégant.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag html">HTML/CSS</span>           
+             <span class="tech-tag vue">Vue.js</span>
+            <span class="tech-tag js">JavaScript</span>
+          </div>
+        </div>
+        <div class="project-footer">
+          <a href="#" class="project-link" @click.prevent="showProjectDetails('hotel')">
+            <i class="fas fa-eye"></i> Voir les détails
+          </a>
+        </div>
+      </div>
+
+       <div class="project-card">
+      <div class="project-header">
+        <h3>Gestion de Bibliothèque</h3>
+        <span class="project-date">Juin 2025</span>
+      </div>
+      <div class="project-content">
+        <p class="project-description">
+          Application Java de gestion complète de bibliothèque avec suivi des prêts, génération de PDF et notifications.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag java">Java</span>
+          <span class="tech-tag mysql">MySQL</span>
+          <span class="tech-tag pdf">iText PDF</span>
+        </div>
+      </div>
+      <div class="project-footer">
+        <a href="#" class="project-link" @click.prevent="showProjectDetails('library')">
+          <i class="fas fa-eye"></i> Voir les détails
+        </a>
+      </div>
     </div>
+
+      
+    </div>
+ 
+    
+
 
     <!-- Modal pour les détails du projet -->
     <div class="project-modal" :class="{ active: activeProject }">
@@ -274,6 +324,85 @@
     </div>
   </div>
 </template>
+
+
+
+ <template v-if="activeProject === 'hotel'">
+          <h3>Azhar Malik Hotel</h3>
+          <div class="modal-body">
+            <div class="modal-image">
+              <img src="../icone/hotel-screenshot.png" alt="Capture d'écran Azhar Malik Hotel">
+            </div>
+            <div class="modal-details">
+              <h4>Détails du projet</h4>
+              <p>Projet personnel front-end démontrant mes compétences en :</p>
+              <ul>
+                <li>Design moderne avec animations CSS</li>
+                <li>Intégration responsive (mobile-first)</li>
+                <li>Carrousel d'images interactif</li>
+                <li>Formulaire de réservation stylisé</li>
+                <li>Effets visuels élégants (transitions, hover)</li>
+              </ul>
+              <div class="modal-tech">
+                <h4>Technologies utilisées</h4>
+                <div class="tech-list">
+                  <span class="tech-tag html">HTML/CSS</span>                             
+                  <span class="tech-tag js">JavaScript</span>
+                   <span class="tech-tag vue">Vue.js</span>
+                </div>
+                <div class="project-link-container">
+                  <a href="https://azharmalik-hotel.netlify.app/" 
+                     target="_blank" 
+                     rel="noopener noreferrer"
+                     class="live-demo-link">
+                    <i class="fas fa-external-link-alt"></i> Voir le projet
+                  </a>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <template v-if="activeProject === 'library'">
+  <h3>Gestion de Bibliothèque (Java)</h3>
+  <div class="modal-body">
+    <div class="modal-image">
+      <img src="../icone/bibliotheque.png" alt="Interface gestion bibliothèque">
+    </div>
+    <div class="modal-details">
+      <div class="features-box">
+        <h4>Fonctionnalités principales</h4>
+        <ul>
+          <li><i class="fas fa-users"></i> Gestion des membres</li>
+          <li><i class="fas fa-book"></i> Suivi des exemplaires</li>
+          <li><i class="fas fa-exchange-alt"></i> Prêts/retours automatisés</li>
+          <li><i class="fas fa-file-pdf"></i> Génération de reçus PDF</li>
+          <li><i class="fas fa-search"></i> Recherche avancée</li>
+          <li><i class="fas fa-bell"></i> Alertes retard par email</li>
+        </ul>
+      </div>
+
+      <div class="tech-box">
+        <h4>Stack technique</h4>
+        <div class="tech-list">
+          <span class="tech-tag java"><i class="fab fa-java"></i> Java</span>
+          <span class="tech-tag mysql"><i class="fas fa-database"></i> MySQL</span>
+          <span class="tech-tag pdf"><i class="fas fa-file-pdf"></i> iText PDF</span>
+        </div>
+      </div>
+
+   
+
+      <div class="project-links">
+        <span class="no-link-disclaimer">
+          <i class="fas fa-desktop"></i> Application desktop
+        </span>
+      </div>
+    </div>
+  </div>
+</template>
+
       </div>
     </div>
   </section>
@@ -301,6 +430,26 @@ export default {
 </script>
 
 <style scoped>
+.features-box li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.features-box li i {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  color: var(--secondary-color);
+}
+
+.tech-box {
+  margin: 1.5rem 0;
+}
+
+.no-link-disclaimer i {
+  margin-right: 8px;
+}
 .projects-section {
   
   
