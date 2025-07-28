@@ -96,6 +96,9 @@
             <a href="https://www.facebook.com/steeven.befeno" target="_blank" class="social-link">
               <i class="fab fa-facebook-f"></i>
             </a>
+             <a href="https://wa.me/261328535118" target="_blank" class="social-link">
+          <i class="fab fa-whatsapp"></i>
+        </a>
           </div>
         </div>
         
