@@ -143,6 +143,27 @@
         </a>
       </div>
     </div>
+    <div class="project-card">
+  <div class="project-header">
+    <h3>Jeux Éducatifs pour Enfants</h3>
+    <span class="project-date">Juin 2025</span>
+  </div>
+  <div class="project-content">
+    <p class="project-description">
+      Plateforme de jeux interactifs pour enfants, réalisée pour le concours DevHunt de mon école.
+    </p>
+    <div class="project-tech">
+      <span class="tech-tag vue">Vue.JS</span>
+      <span class="tech-tag html">HTML/CSS</span>
+      <span class="tech-tag js">JavaScript</span>
+    </div>
+  </div>
+  <div class="project-footer">
+    <a href="#" class="project-link" @click.prevent="showProjectDetails('kidsgames')">
+      <i class="fas fa-eye"></i> Voir les détails
+    </a>
+  </div>
+</div>
 
       
     </div>
@@ -390,14 +411,48 @@
           <span class="tech-tag mysql"><i class="fas fa-database"></i> MySQL</span>
           <span class="tech-tag pdf"><i class="fas fa-file-pdf"></i> iText PDF</span>
         </div>
-      </div>
-
-   
+      </div>  
 
       <div class="project-links">
         <span class="no-link-disclaimer">
           <i class="fas fa-desktop"></i> Application desktop
         </span>
+      </div>
+    </div>
+  </div>
+</template>
+<template v-if="activeProject === 'kidsgames'">
+  <h3>Jeux Éducatifs pour Enfants</h3>
+  <div class="modal-body">
+    <div class="modal-image">
+      <img src="../icone/jeux-enfants.png" alt="Capture d'écran du site de jeux">
+    </div>
+    <div class="modal-details">
+      <h4>Détails du projet</h4>
+      <p>Projet prototype pour le DevHunt4.0 ENI, avec :</p>
+      <ul>
+        <li>Interface intuitive adaptée aux enfants (couleurs, polices)</li>
+        <li>Jeux éducatifs (mémoire, calcul, etc.)</li>
+        <li>Design responsive (mobile & desktop)</li>
+        <li>Déploiement automatisé avec Vercel</li>
+      </ul>
+      <div class="modal-tech">
+        <h4>Technologies utilisées</h4>
+        <div class="tech-list">
+           <span class="tech-tag vue">Vue.JS</span>
+      <span class="tech-tag html">HTML/CSS</span>
+      <span class="tech-tag js">JavaScript</span>
+        </div>
+        <div class="project-link-container">
+          <a href="https://jeux-pour-enfant-gamma.vercel.app/" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="live-demo-link">
+            <i class="fas fa-external-link-alt"></i> Voir le projet
+          </a>
+        
+        </div>
+
       </div>
     </div>
   </div>
