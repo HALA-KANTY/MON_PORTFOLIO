@@ -155,7 +155,7 @@ export default {
   margin: 0 auto;
   padding: 4rem 2rem;
   position: relative;
-  background-color: var(--bg-color);
+
 }
 
 .hero-content {
@@ -320,6 +320,7 @@ export default {
   align-items: center;
   gap: 10px;
   box-shadow: 0 4px 6px rgba(29, 37, 57, 0.1);
+  margin-bottom: -20px;
 }
 
 .cta-button:hover {
